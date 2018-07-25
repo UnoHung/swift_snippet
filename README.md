@@ -51,3 +51,8 @@ let dateString = formatter.string(from: startDate)
 label.attributedText = NSAttributedString(string: "Text", attributes:
     [.underlineStyle: NSUnderlineStyle.styleSingle.rawValue])
 ```    
+
+## 取得螢幕寬度
+```
+UIScreen.main.bounds.width
+```
