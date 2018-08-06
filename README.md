@@ -56,3 +56,30 @@ label.attributedText = NSAttributedString(string: "Text", attributes:
 ```
 UIScreen.main.bounds.width
 ```
+
+## NavigationController 回前一頁
+```
+self.navigationController?.popViewController(animated: true)
+```
+
+## NavigationController 隱藏/顯示
+```
+self.navigationController?.navigationBar.isHidden = true
+```
+
+## TabbarController 隱藏/顯示
+```
+self.tabBarController?.tabBar.isHidden = true
+```
+
+## 離開此頁將 tabbar or Navigation 設定隱藏/顯示
+```
+override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if self.isMovingFromParentViewController {
+            self.tabBarController?.tabBar.isHidden = false
+            self.navigationController?.navigationBar.isHidden = false
+        }
+    }
+```    
