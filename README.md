@@ -89,3 +89,11 @@ override func viewWillDisappear(_ animated: Bool) {
 let webCons = webView.constraints.first { $0.identifier == "webViewHeight" }
 webCons?.constant = newHeight
 ```
+
+## 設定 statusBar 顏色
+```
+// MARK: - 設定 statusBar 顏色
+override var preferredStatusBarStyle: UIStatusBarStyle {
+    return UIStatusBarStyle.lightContent
+}
+```
