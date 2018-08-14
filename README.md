@@ -97,3 +97,12 @@ override var preferredStatusBarStyle: UIStatusBarStyle {
     return UIStatusBarStyle.lightContent
 }
 ```
+
+## Navigation Controller 設定下一頁 back 的文字(在前一個 ViewController 內設定)
+```
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let backItem = UIBarButtonItem()
+    backItem.title = ""
+    navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
+}
+```    
